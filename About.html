@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siddhardh's Portfolio</title>
+    <link rel="stylesheet" href="About.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">SIDDHARDHA NETHA</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="resume.html">Resume / CV</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="interns.html">Experience / Internships</a>
+        <a href="certs.html">Certificates</a>
+        <a href="edu.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <h1>
+        <span class="portfolio">ABOUT</span>
+      </h1>
+      <div class="hero-subtext">
+        <span
+          ><a href="https://www.linkedin.com/in/sai-siddhardha-ashala"
+            >LinkedIn</a
+          ></span
+        >
+        <span><a href="https://github.com/SiddhardhaNetha">Github</a></span>
+        <span><a href="mailto:siddhardhanetha@gmail.com">Email</a></span>
+        <span
+          ><a href="https://www.instagram.com/siddhardha_sai/"
+            >Instagram</a
+          ></span
+        >
+      </div>
+
+      <section class="about-description" id="about-description">
+        <div class="scroll-wrapper">
+          <img src="image.png" alt="Click Icon" class="click-icon" />
+          <div class="scroll-btn-container">
+            <button class="scroll-btn" onclick="scrollToBottom()">
+              Who am I?
+            </button>
+          </div>
+        </div>
+
+        <p>
+          I'm Sai Siddhardha Ashala, a B.Tech CSE student at Lovely Professional
+          University with a passion for technology that goes way beyond the
+          classroom. I’m currently diving deep into the worlds of web, app, and
+          game development, as well as AI/ML and UI/UX design. My technical
+          toolkit includes C#, Python, HTML, CSS, and a growing fluency in
+          JavaScript—which I'm learning on my own like a true self-starter. My
+          long-term goal? To become a full-stack developer at a top tech
+          company, gain real-world experience, and eventually launch my own
+          startup—or keep doing what I love in an environment that excites me
+          every day. Right now, I’m working on GameDrop, a cloud gaming
+          platform, and building a smart shopping website for my dad’s
+          store—because combining tech with real-life impact is what I’m all
+          about.
+        </p>
+      </section>
+      <button id="scrollTopBtn" class="scroll-top-btn">
+        <svg viewBox="0 0 24 24">
+          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+        </svg>
+      </button>
+    </main>
+
+    <footer class="footer">
+      © 2025 Siddhardha Netha. All rights reserved.
+    </footer>
+
+    <script>
+      function scrollToBottom() {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+      }
+      function scrollToUp() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      const scrollBtn = document.getElementById("scrollTopBtn");
+
+      function toggleScrollBtn() {
+        if (window.scrollY > 400) {
+          scrollBtn.classList.add("show");
+        } else {
+          scrollBtn.classList.remove("show");
+        }
+      }
+
+      window.addEventListener("load", toggleScrollBtn);
+      window.addEventListener("scroll", toggleScrollBtn);
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
